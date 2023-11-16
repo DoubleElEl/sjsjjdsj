@@ -1,0 +1,24 @@
+local OpenAndClose = Instance.new("ScreenGui")
+local Toggle = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+OpenAndClose.Name = "OpenAndClose"
+OpenAndClose.Parent = game.CoreGui
+OpenAndClose.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Toggle.Name = "Toggle"
+Toggle.Parent = OpenAndClose
+Toggle.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0.146540031, 0, 0.226984128, 0)
+Toggle.Size = UDim2.new(0, 151, 0, 76)
+Toggle.Font = Enum.Font.Unknown
+Toggle.Text = "Open/Close"
+Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.TextSize = 20.000
+Toggle.MouseButton1Click:Connet(function()
+	game.CoreGui:FindFirstChild("").Enabled = not game.CoreGui:FindFirstChild("").Enabled
+end)
+
+UICorner.Parent = Toggle
